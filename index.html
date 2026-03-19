@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Приклад анімації мерехтіння</title>
+<style>
+.typing {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 1px solid;
+  animation: typing 7s steps(25) forwards, blink 1s infinite;
+  margin: 0 auto;  
+  width: fit-content;
+}
+.pulse-text {
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+@keyframes blink {
+  80% { color-text: transparent; }
+}
+
+    /* Елемент з анімацією */
+    .textm {
+      font-size: 2rem;
+      letter-spacing: 0.5px;
+      animation: simpleAnimation 6s infinite;
+	  text-align: center;
+    }
+
+    /* Ключові кадри анімації прозорості */
+    @keyframes simpleAnimation {
+      0%   { opacity: 0; }
+      25%  { opacity: 0.4; }
+      50%  { opacity: 0.8; }
+      75%  { opacity: 0.4; }
+      100% { opacity: 0; }
+    }
+
+</style>
+</head>
+<body>
+    <h1 class="typing" >Демонстрація анімації друку</h1>
+   <p class="textm">Мерехтливий текст</p>
+</body>
+</html>
